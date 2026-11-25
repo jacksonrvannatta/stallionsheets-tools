@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Debt Payoff Calculator: Snowball vs Avalanche | StallionSheets</title>
+<meta name="description" content="Free debt payoff calculator. Add your debts, compare snowball and avalanche, and see your debt-free date and total interest.">
+<link rel="canonical" href="https://jacksonrvannatta.github.io/stallionsheets-tools/debt-payoff-calculator.html">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:title" content="Debt Payoff Calculator: Snowball vs Avalanche | StallionSheets"><meta property="og:description" content="Free debt payoff calculator. Add your debts, compare snowball and avalanche, and see your debt-free date and total interest."><meta property="og:type" content="website"><meta property="og:url" content="https://jacksonrvannatta.github.io/stallionsheets-tools/debt-payoff-calculator.html">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between the snowball and avalanche methods?", "acceptedAnswer": {"@type": "Answer", "text": "Snowball pays the smallest balance first for quick wins. Avalanche pays the highest interest rate first, which usually costs the least interest overall."}}, {"@type": "Question", "name": "Does the calculator include my minimum payments?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It pays every minimum each month and puts your extra payment on the target debt. When a debt is paid off, its payment rolls to the next one."}}, {"@type": "Question", "name": "What if my payments do not cover the interest?", "acceptedAnswer": {"@type": "Answer", "text": "Then the balance never reaches zero. The calculator will tell you so. Raise your minimums or extra payment to make progress."}}, {"@type": "Question", "name": "Is my information saved or sent anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. The math runs in your browser and nothing you type is sent or stored."}}, {"@type": "Question", "name": "Is this financial advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an estimate for planning. Check numbers against your lender statements."}}]}</script>
+</head><body>
+<header class="site"><div class="wrap"><a class="brand" href="index.html">StallionSheets Free Tools</a><a class="shop" href="https://www.etsy.com/shop/StallionSheets" rel="noopener">Shop on Etsy</a></div></header>
+<main class="wrap">
+<h1>When will I be debt free?</h1><p class="lead">Add your debts, compare snowball and avalanche, and see your payoff date and total interest.</p>
+<section class="card"><h2 style="margin-top:0">Your debts</h2>
+<div id="debts"></div>
+<button class="btn sec" id="add" type="button">+ Add another debt</button>
+<label for="extra">Extra you can pay each month (on top of the minimums)</label>
+<input id="extra" type="number" inputmode="decimal" min="0" step="any" value="100">
+<label for="strat">Method</label>
+<select id="strat"><option value="avalanche">Avalanche (highest interest rate first)</option><option value="snowball">Snowball (smallest balance first)</option></select>
+<button class="btn" id="go" type="button">Calculate</button><p class="err" id="err" role="alert"></p></section>
+<section class="card result" id="res" hidden aria-live="polite"></section>
+<aside class="cta"><h2 style="margin-top:0">Plan every dollar, not just the debt</h2><p>The 2027 Budget Spreadsheet from StallionSheets has a monthly budget, a debt snowball tab and savings goals in one Google Sheets and Excel file.</p><p><a class="btn" href="https://www.etsy.com/listing/4625747764" rel="noopener" target="_blank">See the 2027 Budget Spreadsheet on Etsy</a></p></aside>
+<article><h2>How this debt payoff calculator works</h2><p>Enter each debt with its balance, its APR (the yearly interest rate on your statement) and its minimum monthly payment. Then add any extra money you can put toward debt each month. The calculator runs your payments month by month, adds interest to each balance, and tells you the month the last balance hits zero and how much interest you paid along the way.</p><p>Your total monthly payment stays the same the whole time. When one debt is paid off, the payment that went to it rolls into the next debt. This rolling payment is what makes both methods work.</p><h2>Snowball vs avalanche</h2><p>With the <strong>avalanche</strong> method you put every extra dollar on the debt with the highest interest rate first. This usually costs the least in interest, because the most expensive debt shrinks first.</p><p>With the <strong>snowball</strong> method you put extra dollars on the smallest balance first, whatever the rate. You may pay a little more interest, but small debts disappear faster, and some people find the quick wins help them stick with the plan. The calculator shows both results side by side so you can see the actual difference for your numbers.</p><p>The best method is the one you will actually keep doing. If the two results are close, pick the one that motivates you.</p><h2>Tips for paying debt off faster</h2><p>Even a small extra payment shortens the timeline. Try changing the extra amount above and watch the date move. Use windfalls such as a tax refund or a bonus as one-time lump sums. Stop adding new charges to the cards you are paying down, because new spending undoes the progress.</p><p>Call your card company and ask whether a lower rate is available, and check whether a balance transfer or consolidation loan has fees that cancel out the savings. A written monthly budget makes it much easier to find the extra money in the first place.</p><h2>What this calculator does not include</h2><p>It assumes fixed rates and no new purchases. Variable-rate cards, promotional 0% periods, late fees and annual fees are not modeled. Use it as a clear estimate for planning, then check against your real statements.</p>
+<h2>Frequently asked questions</h2><details><summary>What is the difference between the snowball and avalanche methods?</summary><p>Snowball pays the smallest balance first for quick wins. Avalanche pays the highest interest rate first, which usually costs the least interest overall.</p></details><details><summary>Does the calculator include my minimum payments?</summary><p>Yes. It pays every minimum each month and puts your extra payment on the target debt. When a debt is paid off, its payment rolls to the next one.</p></details><details><summary>What if my payments do not cover the interest?</summary><p>Then the balance never reaches zero. The calculator will tell you so. Raise your minimums or extra payment to make progress.</p></details><details><summary>Is my information saved or sent anywhere?</summary><p>No. The math runs in your browser and nothing you type is sent or stored.</p></details><details><summary>Is this financial advice?</summary><p>No. It is an estimate for planning. Check numbers against your lender statements.</p></details></article>
+</main>
+<footer><div class="wrap"><p>Free tools by <a href="https://www.etsy.com/shop/StallionSheets" rel="noopener">StallionSheets</a>. <a href="index.html">All tools</a></p>
+<p class="note">These calculators give estimates for planning only. They are not financial, tax or legal advice. Nothing you type leaves your device.</p></div></footer>
+<script src="calc.js"></script>
+<script>
+var box=document.getElementById('debts');
+function addRow(n,b,a,m){var d=document.createElement('div');d.className='row3';
+d.innerHTML='<div class="nm"><label>Name</label><input class="n" type="text" maxlength="40"></div><div><label>Balance $</label><input class="b" type="number" inputmode="decimal" min="0" step="any"></div><div><label>APR %</label><input class="a" type="number" inputmode="decimal" min="0" step="any"></div><div><label>Min / mo $</label><input class="m" type="number" inputmode="decimal" min="0" step="any"></div><button type="button" class="btn x" aria-label="Remove debt">&times;</button>';
+d.querySelector('.n').value=n||'';d.querySelector('.b').value=b||'';d.querySelector('.a').value=a||'';d.querySelector('.m').value=m||'';
+d.querySelector('.x').onclick=function(){if(box.children.length>1)box.removeChild(d)};box.appendChild(d)}
+addRow('Credit card',3000,24,90);addRow('Car loan',9000,7,250);addRow('Store card',800,27,35);
+document.getElementById('add').onclick=function(){addRow()};
+function dateIn(m){var d=new Date();d.setDate(1);d.setMonth(d.getMonth()+m);return d.toLocaleDateString('en-US',{month:'long',year:'numeric'})}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function summary(r,extra,s){return r}
+document.getElementById('go').onclick=function(){
+var err=document.getElementById('err');err.textContent='';var debts=[];
+var rows=box.children;
+for(var i=0;i<rows.length;i++){var r=rows[i];var bal=parseFloat(r.querySelector('.b').value),apr=parseFloat(r.querySelector('.a').value)||0,min=parseFloat(r.querySelector('.m').value)||0;
+if(!(bal>0))continue;debts.push({name:r.querySelector('.n').value||('Debt '+(i+1)),balance:bal,apr:apr,min:min})}
+var extra=parseFloat(document.getElementById('extra').value)||0;
+if(!debts.length){err.textContent='Enter at least one debt with a balance.';return}
+if(extra<0||debts.some(function(d){return d.apr<0||d.min<0})){err.textContent='Numbers cannot be negative.';return}
+var s=document.getElementById('strat').value;
+var res=Calc.debtPayoff(debts,extra,s),other=Calc.debtPayoff(debts,extra,s==='avalanche'?'snowball':'avalanche'),base=Calc.debtPayoff(debts,0,s);
+var el=document.getElementById('res');el.hidden=false;
+if(!res.ok){el.innerHTML='<p class="big">Not payoff-able at this payment</p><p>Your payments are not covering the interest, so the balance never reaches zero (or takes over 100 years). Raise the minimums or the extra amount and try again.</p>';return}
+var name=s==='avalanche'?'Avalanche':'Snowball',oname=s==='avalanche'?'Snowball':'Avalanche';
+var h='<p class="note" style="margin:0">'+name+' method</p><p class="big">Debt free in '+dateIn(res.months)+'</p><p>'+Calc.monthsToText(res.months)+' from now.</p>';
+h+='<div class="stat"><div><small>Total interest</small><b>'+Calc.money(res.totalInterest)+'</b></div><div><small>Total you pay</small><b>'+Calc.money(res.totalPaid)+'</b></div><div><small>Monthly budget</small><b>'+Calc.money(debts.reduce(function(a,d){return a+d.min},0)+extra)+'</b></div></div>';
+if(other.ok){var diff=Calc.r2(other.totalInterest-res.totalInterest);h+='<p>'+oname+' instead: debt free in '+dateIn(other.months)+', interest '+Calc.money(other.totalInterest)+(diff>0?' ('+Calc.money(diff)+' more).':diff<0?' ('+Calc.money(-diff)+' less).':' (same).')+'</p>'}
+if(base.ok&&extra>0){h+='<p>With no extra payment: '+Calc.monthsToText(base.months)+' and '+Calc.money(base.totalInterest)+' interest.</p>'}
+h+='<h3>Payoff order</h3><table><tr><th>Debt</th><th>Paid off</th><th class="n">Interest</th></tr>';
+res.debts.slice().sort(function(a,b){return a.paidMonth-b.paidMonth}).forEach(function(d){h+='<tr><td>'+esc(d.name)+'</td><td>'+dateIn(d.paidMonth)+'</td><td class="n">'+Calc.money(d.interest)+'</td></tr>'});
+h+='</table><p class="note">Assumes a fixed rate, no new charges, and interest added monthly (APR / 12). Your lender statements are the final word.</p>';
+el.innerHTML=h;el.scrollIntoView({behavior:'smooth',block:'nearest'})};
+</script>
+</body></html>

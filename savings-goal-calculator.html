@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Savings Goal Calculator: How Much to Save Per Week or Month | StallionSheets</title>
+<meta name="description" content="Free savings goal calculator. See how much to save per week or month to reach your goal by a date.">
+<link rel="canonical" href="https://jacksonrvannatta.github.io/stallionsheets-tools/savings-goal-calculator.html">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:title" content="Savings Goal Calculator: How Much to Save Per Week or Month | StallionSheets"><meta property="og:description" content="Free savings goal calculator. See how much to save per week or month to reach your goal by a date."><meta property="og:type" content="website"><meta property="og:url" content="https://jacksonrvannatta.github.io/stallionsheets-tools/savings-goal-calculator.html">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate how much to save each month?", "acceptedAnswer": {"@type": "Answer", "text": "Subtract what you have saved from your goal and divide by the number of months until your deadline. This calculator does that for you and also shows the weekly amount."}}, {"@type": "Question", "name": "Does the calculator include interest?", "acceptedAnswer": {"@type": "Answer", "text": "Only if you enter a yearly interest rate. With a rate of 0, it is simple division."}}, {"@type": "Question", "name": "Should I save weekly or monthly?", "acceptedAnswer": {"@type": "Answer", "text": "Whichever matches how you are paid. Use one plan or the other, not both."}}, {"@type": "Question", "name": "What if my target date is very soon?", "acceptedAnswer": {"@type": "Answer", "text": "The required amount will be large. Try a later date or a smaller goal to see what is realistic."}}, {"@type": "Question", "name": "Is my data stored?", "acceptedAnswer": {"@type": "Answer", "text": "No. The math runs in your browser and nothing is sent or saved."}}]}</script>
+</head><body>
+<header class="site"><div class="wrap"><a class="brand" href="index.html">StallionSheets Free Tools</a><a class="shop" href="https://www.etsy.com/shop/StallionSheets" rel="noopener">Shop on Etsy</a></div></header>
+<main class="wrap">
+<h1>How much do I need to save?</h1><p class="lead">Set a goal and a date. See what to save each week or month to get there.</p>
+<section class="card"><h2 style="margin-top:0">Your goal</h2>
+<div class="row"><div><label for="goal">Savings goal ($)</label><input id="goal" type="number" inputmode="decimal" min="0" step="any" value="5000"></div>
+<div><label for="cur">Already saved ($)</label><input id="cur" type="number" inputmode="decimal" min="0" step="any" value="500"></div>
+<div><label for="date">Target date</label><input id="date" type="date"></div>
+<div><label for="apr">Yearly interest rate, optional (%)</label><input id="apr" type="number" inputmode="decimal" min="0" step="any" value="0"></div></div>
+<button class="btn" id="go" type="button">Calculate</button><p class="err" id="err" role="alert"></p></section>
+<section class="card result" id="res" hidden aria-live="polite"></section>
+<aside class="cta"><h2 style="margin-top:0">Put your goal in a plan</h2><p>The 2027 Budget Spreadsheet from StallionSheets includes monthly budgets, a debt snowball tab and savings goals.</p><p><a class="btn" href="https://www.etsy.com/listing/4625747764" rel="noopener" target="_blank">See the 2027 Budget Spreadsheet on Etsy</a></p></aside>
+<article><h2>How much should you save each month?</h2><p>A savings goal feels much more doable when it is broken into small regular amounts. Enter how much you want to save, how much you already have, and the date you need it. The calculator tells you the amount to set aside each week or each month to get there.</p><h2>How the calculation works</h2><p>It subtracts what you have already saved from your goal, then divides the rest by the number of whole weeks or months until your date. If you enter an interest rate, it accounts for the interest your savings would earn at a steady rate, so the required deposit is a little lower. If you leave the rate at zero, it is plain division.</p><p>Choose either the weekly amount or the monthly amount, not both. Weekly is handy if you are paid weekly or every two weeks, because small amounts are easier to move than a large monthly lump.</p><h2>Making the goal realistic</h2><p>If the number looks too high, you have three levers: move the date later, lower the goal, or raise what you have already saved with a one-time deposit. Try each in the calculator and see which feels right. A smaller goal you reach builds momentum.</p><p>Make the saving automatic. Set up a recurring transfer to a separate savings account on payday, so the money moves before you can spend it. Keeping it in its own account, ideally labeled with the goal, makes it harder to dip into.</p><h2>Common goals</h2><p>Popular targets include an emergency fund, a trip, a down payment, a car repair fund, holiday spending and annual bills such as insurance or taxes. For an emergency fund, many people aim for a few months of essential expenses, but the right size depends on your situation.</p><h2>What to remember</h2><p>Interest rates change, and accounts may charge fees, so treat the result as a planning estimate. Tracking each deposit in a budget, so you can see progress toward the goal, is one of the best ways to stay motivated.</p>
+<h2>Frequently asked questions</h2><details><summary>How do I calculate how much to save each month?</summary><p>Subtract what you have saved from your goal and divide by the number of months until your deadline. This calculator does that for you and also shows the weekly amount.</p></details><details><summary>Does the calculator include interest?</summary><p>Only if you enter a yearly interest rate. With a rate of 0, it is simple division.</p></details><details><summary>Should I save weekly or monthly?</summary><p>Whichever matches how you are paid. Use one plan or the other, not both.</p></details><details><summary>What if my target date is very soon?</summary><p>The required amount will be large. Try a later date or a smaller goal to see what is realistic.</p></details><details><summary>Is my data stored?</summary><p>No. The math runs in your browser and nothing is sent or saved.</p></details></article>
+</main>
+<footer><div class="wrap"><p>Free tools by <a href="https://www.etsy.com/shop/StallionSheets" rel="noopener">StallionSheets</a>. <a href="index.html">All tools</a></p>
+<p class="note">These calculators give estimates for planning only. They are not financial, tax or legal advice. Nothing you type leaves your device.</p></div></footer>
+<script src="calc.js"></script>
+<script>
+(function(){var d=new Date();d.setMonth(d.getMonth()+12);var p=function(n){return String(n).padStart(2,'0')};
+document.getElementById('date').value=d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())})();
+document.getElementById('go').onclick=function(){
+var err=document.getElementById('err');err.textContent='';
+var goal=parseFloat(document.getElementById('goal').value),cur=parseFloat(document.getElementById('cur').value)||0,apr=parseFloat(document.getElementById('apr').value)||0,ds=document.getElementById('date').value;
+if(!(goal>0)){err.textContent='Enter a goal above 0.';return}
+if(cur<0||apr<0){err.textContent='Numbers cannot be negative.';return}
+if(!ds){err.textContent='Pick a target date.';return}
+var parts=ds.split('-'),t=new Date(+parts[0],+parts[1]-1,+parts[2]),n=new Date();n=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+var days=Math.round((t-n)/86400000);
+if(days<1){err.textContent='Pick a date in the future.';return}
+var el=document.getElementById('res');el.hidden=false;
+if(cur>=goal){el.innerHTML='<p class="big">You are already there</p><p>You have saved '+Calc.money(cur)+', which meets your goal of '+Calc.money(goal)+'.</p>';return}
+var r=Calc.savings(goal,cur,days,apr);
+el.innerHTML='<p class="note" style="margin:0">To reach '+Calc.money(goal)+' by '+t.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+'</p><p class="big">'+Calc.money(r.month.perPeriod)+' per month</p><p>or '+Calc.money(r.week.perPeriod)+' per week</p><div class="stat"><div><small>Still to save</small><b>'+Calc.money(r.remaining)+'</b></div><div><small>Days left</small><b>'+days+'</b></div><div><small>Monthly deposits</small><b>'+r.month.periods+'</b></div><div><small>Weekly deposits</small><b>'+r.week.periods+'</b></div></div><p class="note">Pick the weekly or the monthly plan, not both. The number of deposits is rounded down to whole weeks or months, so the plan lands on or just before your date. Interest, if you entered a rate, is assumed to compound each period at a steady rate; real accounts vary.</p>';
+el.scrollIntoView({behavior:'smooth',block:'nearest'})};
+</script>
+</body></html>

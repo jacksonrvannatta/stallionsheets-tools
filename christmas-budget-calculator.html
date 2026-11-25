@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Christmas Budget Calculator: Split Your Holiday Budget | StallionSheets</title>
+<meta name="description" content="Free Christmas budget calculator. Split your holiday budget across everyone on your list, evenly or by priority.">
+<link rel="canonical" href="https://jacksonrvannatta.github.io/stallionsheets-tools/christmas-budget-calculator.html">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:title" content="Christmas Budget Calculator: Split Your Holiday Budget | StallionSheets"><meta property="og:description" content="Free Christmas budget calculator. Split your holiday budget across everyone on your list, evenly or by priority."><meta property="og:type" content="website"><meta property="og:url" content="https://jacksonrvannatta.github.io/stallionsheets-tools/christmas-budget-calculator.html">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I spend on Christmas?", "acceptedAnswer": {"@type": "Answer", "text": "There is no right amount. Pick a total you can pay for from money you already have, without borrowing."}}, {"@type": "Question", "name": "What does the priority number do?", "acceptedAnswer": {"@type": "Answer", "text": "Each person receives a share of the gift budget in proportion to their priority. A 4 gets twice as much as a 2."}}, {"@type": "Question", "name": "Why is there a hold-back percentage?", "acceptedAnswer": {"@type": "Answer", "text": "To cover wrapping, shipping and extras so they do not break the budget. Set it to 0 if you do not want it."}}, {"@type": "Question", "name": "Does this work for Hanukkah, birthdays or other occasions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It simply splits any budget across a list of people."}}, {"@type": "Question", "name": "Is my list saved?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything stays in your browser and disappears when you close the page."}}]}</script>
+</head><body>
+<header class="site"><div class="wrap"><a class="brand" href="index.html">StallionSheets Free Tools</a><a class="shop" href="https://www.etsy.com/shop/StallionSheets" rel="noopener">Shop on Etsy</a></div></header>
+<main class="wrap">
+<h1>How do I split my Christmas budget?</h1><p class="lead">Enter your total and your list. Get a gift amount for each person, evenly or by priority.</p>
+<section class="card"><h2 style="margin-top:0">Your holiday budget</h2>
+<div class="row"><div><label for="tot">Total holiday budget ($)</label><input id="tot" type="number" inputmode="decimal" min="0" step="any" value="600"></div>
+<div><label for="buf">Hold back for wrapping, shipping and extras (%)</label><input id="buf" type="number" inputmode="decimal" min="0" max="50" step="any" value="10"></div></div>
+<label for="mode">How to split</label>
+<select id="mode"><option value="even">Evenly across everyone</option><option value="w">By priority (1 to 5 per person)</option></select>
+<h3>People</h3><div id="ppl"></div>
+<button class="btn sec" id="add" type="button">+ Add person</button><br>
+<button class="btn" id="go" type="button">Split my budget</button><p class="err" id="err" role="alert"></p></section>
+<section class="card result" id="res" hidden aria-live="polite"></section>
+<aside class="cta"><h2 style="margin-top:0">Track the whole holiday in one place</h2><p>StallionSheets has a Christmas budget spreadsheet for tracking gifts, spending and what is left.</p><p><a class="btn" href="https://www.etsy.com/listing/4625740827" rel="noopener" target="_blank">See the Christmas budget template on Etsy</a></p></aside>
+<article><h2>How to set a Christmas budget that works</h2><p>Holiday spending creeps up because it happens in small pieces: a gift here, a sale there, shipping, wrapping paper, a party dish, a card. The easiest way to stay in control is to decide the total first, then divide it before you shop.</p><p>Start with a number you can pay for without borrowing. Look at your income between now and the holidays and decide what you can set aside. Then enter that total here, and the calculator divides it across your list.</p><h2>Even split or by priority</h2><p>An even split is the simplest: everyone gets the same amount. It works well for a list of similar relationships, such as a set of cousins.</p><p>The priority option lets you give more to the people closest to you. Give each person a number from 1 to 5, and the budget is divided in proportion. Someone with a 4 receives twice as much as someone with a 2. Adjust the numbers until the amounts look right to you.</p><h2>Why hold back a percentage</h2><p>Gift prices are only part of the cost. Wrapping, gift bags, shipping, batteries, stocking stuffers and last-minute extras add up. Holding back around 10 percent from the start keeps those costs from pushing you over. If you do not need that cushion, set it to zero.</p><h2>Tips to stay on budget</h2><p>Write the list down with a dollar limit beside every name. Shop with the list, not the sale. Keep a running total as you buy, whether in a notebook or a spreadsheet, so you always know what is left. Consider homemade gifts, shared family gifts, or a name draw for large groups, which means each person buys for one other person instead of everyone.</p><p>Do not forget costs outside gifts: travel, food, decorations and events. If those matter in your household, include them as people on the list or subtract them from the total first.</p><h2>After the holidays</h2><p>Compare what you planned with what you spent. Notes from this year make next year easier, and starting a small monthly holiday fund in January keeps the next December from being a shock.</p>
+<h2>Frequently asked questions</h2><details><summary>How much should I spend on Christmas?</summary><p>There is no right amount. Pick a total you can pay for from money you already have, without borrowing.</p></details><details><summary>What does the priority number do?</summary><p>Each person receives a share of the gift budget in proportion to their priority. A 4 gets twice as much as a 2.</p></details><details><summary>Why is there a hold-back percentage?</summary><p>To cover wrapping, shipping and extras so they do not break the budget. Set it to 0 if you do not want it.</p></details><details><summary>Does this work for Hanukkah, birthdays or other occasions?</summary><p>Yes. It simply splits any budget across a list of people.</p></details><details><summary>Is my list saved?</summary><p>No. Everything stays in your browser and disappears when you close the page.</p></details></article>
+</main>
+<footer><div class="wrap"><p>Free tools by <a href="https://www.etsy.com/shop/StallionSheets" rel="noopener">StallionSheets</a>. <a href="index.html">All tools</a></p>
+<p class="note">These calculators give estimates for planning only. They are not financial, tax or legal advice. Nothing you type leaves your device.</p></div></footer>
+<script src="calc.js"></script>
+<script>
+var box=document.getElementById('ppl');
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function addRow(n,w){var d=document.createElement('div');d.className='row3';d.style.gridTemplateColumns='2fr 1fr auto';
+d.innerHTML='<div><label>Name</label><input class="n" type="text" maxlength="40"></div><div><label>Priority</label><select class="w"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><button type="button" class="btn x" aria-label="Remove person">&times;</button>';
+d.querySelector('.n').value=n||'';d.querySelector('.w').value=w||3;
+d.querySelector('.x').onclick=function(){if(box.children.length>1)box.removeChild(d)};box.appendChild(d)}
+['Mom','Dad','Sister','Best friend','Kid'].forEach(function(n,i){addRow(n,[5,5,3,2,5][i])});
+document.getElementById('add').onclick=function(){addRow()};
+document.getElementById('go').onclick=function(){
+var err=document.getElementById('err');err.textContent='';
+var tot=parseFloat(document.getElementById('tot').value),buf=parseFloat(document.getElementById('buf').value)||0;
+if(!(tot>0)){err.textContent='Enter a total budget above 0.';return}
+if(buf<0||buf>50){err.textContent='Hold-back must be between 0 and 50 percent.';return}
+var even=document.getElementById('mode').value==='even',ppl=[];
+for(var i=0;i<box.children.length;i++){var r=box.children[i];ppl.push({name:r.querySelector('.n').value||('Person '+(i+1)),weight:even?1:parseFloat(r.querySelector('.w').value)})}
+var res=Calc.holiday(tot,buf,ppl),el=document.getElementById('res');el.hidden=false;
+var h='<p class="note" style="margin:0">Total budget '+Calc.money(tot)+'</p><p class="big">'+Calc.money(res.pool)+' for gifts</p><p>'+Calc.money(res.buffer)+' held back for wrapping, shipping and extras.</p><table><tr><th>Person</th><th class="n">Gift budget</th></tr>';
+res.shares.forEach(function(s){h+='<tr><td>'+esc(s.name)+'</td><td class="n">'+Calc.money(s.amount)+'</td></tr>'});
+h+='</table><p class="note">Amounts are rounded to the cent, so they may differ from the total by a few cents.</p>';
+el.innerHTML=h;el.scrollIntoView({behavior:'smooth',block:'nearest'})};
+</script>
+</body></html>
